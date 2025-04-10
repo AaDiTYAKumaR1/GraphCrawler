@@ -11,4 +11,6 @@ export interface singleCellInterface{
     ispath: boolean;
     pathsum: number;
     cellNumber: number;
+    prevCell: singleCellInterface | null;
+    isTarget:boolean;
 }

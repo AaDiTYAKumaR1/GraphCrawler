@@ -1,16 +1,14 @@
 
 import './App.css'
+import Grid from './components/Grid'
 
 function App() {
 
   return (
     <>
-      <div className='min-h-screen flex items-center justify-center'>
-        <div> hi</div>
-        <div className=' grid-col-5 grid gap-4'>
-          
-
-        </div>
+      <div className='min-h-screen flex justify-center items-center min-w-screen'>
+        
+            <Grid/>
       </div>
       </>
   )
