@@ -227,7 +227,7 @@ const Grid = () => {
             target="_blank"
             className="  disabled:bg-gray-400  disabled:cursor-not-allowed inline-flex bg-gray-600 px-4 py-2 text-[15px] text-white items-center  rounded-md"
           >
-            <img src="/assets/github.png" className="h-[18px] w-[18px] mr-2 " />{" "}
+            <img src="assets/github.png" className="h-[18px] w-[18px] mr-2 " />{" "}
             Source code
           </a>
         </div>

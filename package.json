@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/Addii155/GraphCrawler",
+  "homepage": "https://addii155.github.io/GraphCrawler",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
