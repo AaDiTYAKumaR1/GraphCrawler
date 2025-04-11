@@ -13,7 +13,7 @@ const Grid = () => {
     null
   );
   const [endPoint, setendPoint] = useState<singleCellInterface | null>(null);
-  const [renderFlag, setrenderFlag] = useState<boolean>(false);
+  const [, setrenderFlag] = useState<boolean>(false);
 
   const [isMouseDown, setIsMouseDown] = useState(false);
   const [foundPath, setfoundPath] = useState<singleCellInterface[] | null>(
@@ -49,7 +49,6 @@ const Grid = () => {
   };
 
   const onCellClick = (
-    cell: singleCellInterface,
     rowIndex: number,
     colIndex: number
   ) => {
@@ -252,7 +251,7 @@ const Grid = () => {
               onMouseDown={() => setIsMouseDown(true)}
               onMouseUp={() => setIsMouseDown(false)}
               onClick={() => {
-                onCellClick(cell, rowIndex, colIndex);
+                onCellClick(rowIndex, colIndex);
               }}
             />
           ))

@@ -1,12 +1,9 @@
-import { getcurrent } from "../utils/helper";
 import { singleCellInterface } from "../Interfaces/types";
 import { ImLocation } from "react-icons/im";
 import { FaTrophy } from "react-icons/fa";
 
 const Cell = ({
   cell,
-  rowIndex,
-  colIndex,
   ...props
 }: {
   cell: singleCellInterface;
@@ -16,6 +13,7 @@ const Cell = ({
   onMouseEnter: () => void;
   onMouseDown: () => void;
   onMouseUp: () => void;
+  id: string;
 }) => {
   return (
     <div {...props} className={`lg:w-6 w-4 lg:h-6 h-4 cell
