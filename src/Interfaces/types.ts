@@ -13,4 +13,11 @@ export interface singleCellInterface{
     cellNumber: number;
     prevCell: singleCellInterface | null;
     isTarget:boolean;
+    distanceFromStart: number;
+}
+export
+ enum Algorithm {
+    DFS = "DFS",
+    BFS = "BFS",
+    DIJKSTRA = "DIJKSTRA",
 }

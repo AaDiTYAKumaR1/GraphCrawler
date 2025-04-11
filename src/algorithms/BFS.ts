@@ -4,20 +4,21 @@ export const BFS = (
     startCell:singleCellInterface,
     endCell:singleCellInterface,
     grid:singleCellInterface[][]
-): singleCellInterface[] => {
+): [singleCellInterface[], TimeTaken:number] => {
+    const startTime = Date.now();
     const visitedCells : singleCellInterface[] = [];
     const queue : singleCellInterface[] = [startCell];
     startCell.isvisited = true;
     while(queue.length > 0) {
         const currentCell = queue.shift();
         if(!currentCell) {
-            return visitedCells;
+            return [visitedCells, Date.now() - startTime];
         }
         visitedCells.push(currentCell);
         const { cellNumber, row, col } = currentCell;
         if(cellNumber === endCell.cellNumber) {
             endCell.isTarget = true;
-            return visitedCells;
+            return [visitedCells, Date.now() - startTime];
         }
         // Check each of the four neighbors and add them if they are valid:
         // DOWN
@@ -45,5 +46,5 @@ export const BFS = (
             queue.push(grid[row][col + 1]);
         }
     }
-    return visitedCells;
+    return [visitedCells, Date.now() - startTime];
 }

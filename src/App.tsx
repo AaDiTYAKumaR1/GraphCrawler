@@ -6,8 +6,7 @@ function App() {
 
   return (
     <>
-      <div className='min-h-screen flex justify-center items-center min-w-screen'>
-        
+      <div >
             <Grid/>
       </div>
       </>

@@ -1,5 +1,7 @@
 import { getcurrent } from "../utils/helper";
 import { singleCellInterface } from "../Interfaces/types";
+import { ImLocation } from "react-icons/im";
+import { FaTrophy } from "react-icons/fa";
 
 const Cell = ({
   cell,
@@ -16,13 +18,18 @@ const Cell = ({
   onMouseUp: () => void;
 }) => {
   return (
-    <div {...props} className={`lg:w-6 w-4 lg:h-6 h-4
+    <div {...props} className={`lg:w-6 w-4 lg:h-6 h-4 cell
        hover:bg-gray-400 cursor-pointer inline-flex justify-center
        items-center aspect-square border-[0.1px] border-indigo-300
-       ${cell.isstart ? "bg-green-500" : ""}
-       ${cell.isend ? "bg-red-500" : ""}
        ${cell.iswall ? "bg-gray-800" : ""}
-      `}></div>
+      `}>
+        {
+          cell.isstart ? <ImLocation /> : null
+        }
+        {
+          cell.isend ? <FaTrophy /> : null
+        }
+      </div>
   );
 };
 
